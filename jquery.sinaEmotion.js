@@ -128,7 +128,7 @@ function AnalyticEmotion(s, path) {
 			return s;
 		for (var i = 0; i < sArr.length; i++) {
 
-			var reStr = "<img src=\"" + path + "/images/emotions/" + getJsonValue(uSinaEmotions, sArr[i])
+			var reStr = "<img src=\"" + path  + getJsonValue(uSinaEmotions, sArr[i])
 					+ "\" style='width:22px;height:22px;' />";
 			s = s.replace(sArr[i], reStr);
 		}
@@ -203,8 +203,8 @@ function preLoadImg(url) {
 			$.each(uSinaEmotions, function(name, value) {
 				$('.emotionsCss .emcontainer').append(
 						$('<a class="a_emotions" href="javascript:void(0);" title="' + name + '"><img src="' + imgpath
-								+ '/images/emotions/' + value + '" alt="' + name + '" width="22" height="22" /></a>'));
-				preLoadImg(imgpath + '/images/emotions/' + value);
+								 + value + '" alt="' + name + '" width="22" height="22" /></a>'));
+				preLoadImg(imgpath + value);
 			});
 			$('.a_emotions').click(function() {
 				target.insertText($(this).attr('title'));
