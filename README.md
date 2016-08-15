@@ -1,0 +1,2 @@
+# sinaEmotion
+jquery.sinaEmotion
